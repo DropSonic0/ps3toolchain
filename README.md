@@ -22,8 +22,8 @@ For Debian based distros:
 
 ```bash
   apt-get install autoconf automake bison flex gcc libelf-dev make \
-    texinfo libncurses5-dev patch python subversion wget zlib1g-dev \
-    libtool libtool-bin python-dev bzip2 libgmp3-dev pkg-config g++ libssl-dev clang
+    texinfo libncurses5-dev patch python-is-python3 subversion wget zlib1g-dev \
+    libtool libtool-bin python-dev-is-python3 bzip2 libgmp3-dev pkg-config g++ libssl-dev clang python3-distutils-extra
 ```
 
 For Debian 11 and 12:
@@ -55,12 +55,14 @@ For RedHat distros:
 
 ## Add the following variables to your bash config:
 ```bash
-  export PS3DEV=/usr/local/ps3dev
-  export PSL1GHT=$PS3DEV
+export PS3DEV=/usr/local/ps3dev
+export PSL1GHT=$PS3DEV
 
-  export PATH=$PATH:$PS3DEV/bin
-  export PATH=$PATH:$PS3DEV/ppu/bin
-  export PATH=$PATH:$PS3DEV/spu/bin
+export PATH=$PATH:$PS3DEV/bin
+export PATH=$PATH:$PS3DEV/ppu/bin
+export PATH=$PATH:$PS3DEV/spu/bin
+
+export PKG_CONFIG_PATH=$PS3DEV/portlibs/ppu/lib/pkgconfig/
 ```
 
 ## Run the toolchain script:
